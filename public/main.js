@@ -9,14 +9,14 @@ function addQuizPoints(){
     window.location.href='/completeQuiz'
   
 }
-let userInput = document.querySelector('#userInput')
+let userNameInput = document.querySelector('#userNameInput')
 let emailInput = document.querySelector('#emailInput')
 document.querySelector('#updateBtn1').addEventListener('click', updateUser)
 // document.querySelector('#updateBtn2').addEventListener('click', updateEmail)
 
 function showInputs(input){
     document.querySelector('#updateBtn1').hidden = false;
-    userInput.hidden = false
+    userNameInput.hidden = false
 }
 function showInputs2(input){
   document.querySelector('#updateBtn2').hidden = false;

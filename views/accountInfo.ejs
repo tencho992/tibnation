@@ -19,7 +19,7 @@
    <div id="one">
       <h2>User Name: <%= user.userName %><i onclick="showInputs()" class="fal fa-pencil editUser"></i></h2>
       <form action="/updateUser/<%= user._id.toString()%>/?_method=PUT" method="post">
-       <input type="text" id="userInputAcc" hidden placeholder="update username" name="newUserName">
+       <input type="text" id="userNameInput" hidden placeholder="update username" name="newUserName">
        <button type="submit" class="e-btn" hidden id="updateBtn1">Update</button>
       </form>
    </div>
