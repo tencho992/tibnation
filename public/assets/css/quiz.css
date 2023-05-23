@@ -1,0 +1,173 @@
+body{
+    background-size: cover;
+}
+#quizButton{
+    margin-bottom: 420px;
+    margin-left: 900px;
+}
+#container{
+    margin : 20px auto;
+    background-color: rgba(138, 170, 20, 0.541);
+    height: 300px;
+    width : 700px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+    margin-top: 50px;
+}
+#start{
+    font-size: 1.5em;
+    font-weight: bolder;
+    word-break: break-all;
+    width:200px;
+    height:150px;
+    border : 2px solid rgb(12, 11, 11);
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    left:250px;
+    top:50px;
+    color : rgb(12, 9, 9);
+    padding-top: 50px;
+}
+#start:hover{
+    border: 3px solid rgb(238, 246, 245);
+    color : rgb(30, 65, 64);
+}
+
+#qImg{
+    width : 200px;
+    height : 200px;
+    position: absolute;
+    left : 0px;
+    top : 0px;
+    
+}
+#qImg img{
+    width : 200px;
+    height : 200px;
+    border-top-left-radius: 15px;
+}
+
+#question{
+    width:500px;
+    height : 125px;
+    position: absolute;
+    right:0;
+    top:0;
+    color: #000;
+}
+#question p{
+    margin : 0;
+    padding : 15px;
+    font-size: 1.25em;
+    color: black;
+}
+
+#choices{
+    width : 480px;
+    position: absolute;
+    right : 0;
+    top : 125px;
+    padding : 10px
+}
+.choice{
+    display: inline-block;
+    width : 135px;
+    text-align: center;
+    border : 1px solid rgb(9, 8, 8);
+    border-radius: 15px;
+    cursor: pointer;
+    padding : 5px;
+}
+.choice:hover{
+    border : 2px solid rgb(10, 8, 8);
+    font-weight: bold;
+}
+
+#timer{
+    position: absolute;
+    height : 100px;
+    width : 200px;
+    bottom : 0px;
+    text-align: center;
+}
+#counter{
+    font-size: 1em;
+}
+#btimeGauge{
+    width : 150px;
+    height : 10px;
+    border-radius: 10px;
+    background-color: lightgray;
+    margin-left : 25px;
+}
+#timeGauge{
+    height : 10px;
+    border-radius: 10px;
+    background-color: mediumseagreen;
+    margin-top : -10px;
+    margin-left : 25px;
+}
+#progress{
+    width : 500px;
+    position: absolute;
+    bottom : 0px;
+    right : 0px;
+    padding:5px;
+    text-align: right;
+}
+.prog{
+    width : 25px;
+    height : 25px;
+    border: 1px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left : 5px;
+    margin-right : 5px;
+}
+#scoreContainer{
+    margin : 20px auto;
+    background-color: white;
+    opacity: 0.8;
+    height: 300px;
+    width : 700px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+    display: none;
+}
+#scoreContainer img{
+    position: absolute;
+    top:100px;
+    left:325px;
+}
+#scoreContainer p{
+    position: absolute;
+    display: block;
+    width : 59px;
+    height :59px;
+    top:40px;
+    left:325px;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

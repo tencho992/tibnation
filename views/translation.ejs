@@ -1,0 +1,69 @@
+<%- include('partials/headerTrans') -%>
+<main>
+
+    <!-- page title area start -->
+    <section class="page__title-area page__title-height page__title-overlay d-flex align-items-center" data-background="assets/img/banner/tibscroll.webp">
+       <div class="container">
+          <div class="row">
+             <div class="col-xxl-12">
+                <div class="page__title-wrapper mt-110">
+                   <h3 class="page__title">Text Translator</h3>                         
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+    <!-- page title area end -->
+
+    <!-- contact area start -->
+    <section class="contact__area pt-115 pb-120">
+       <div class="container">
+          <div class="row">
+             <div class="col-xxl-7 col-xl-7 col-lg-6">
+                <div class="contact__wrapper">
+                   <div class="section__title-wrapper mb-40">
+                      <h2 class="section__title">English to <span class="yellow-bg yellow-bg-big">Tibetan<img src="assets/img/shape/yellow-bg.png" alt=""></span></h2>
+                      <p>Working on providing the English pronunciation.</p>
+                   </div>
+                   <div class="contact__form">
+                         <div class="row">
+                            <div class="col-xxl-6 col-xl-6 col-md-6">
+                               <div class="contact__form-input">
+                                  <input type="search" placeholder="Enter Text Here..." id="user" autocomplete="off">
+                               </div>
+                            </div>
+                            <div class="col-xxl-12">
+                               <div class="contact__btn">
+                                  <button class="e-btn" id="translate">Translate</button>
+                               </div>
+                            </div>
+                         </div>
+                         <section id="displayTranslation">
+                      <h3 id="tibetanOutput"></h3>
+                      <h5 id="userInput"></h5>
+                    </section>
+                   </div>
+                </div>
+             </div>
+             <div class="col-xxl-4 offset-xxl-1 col-xl-4 offset-xl-1 col-lg-5 offset-lg-1">
+                <div class="contact__info white-bg p-relative z-index-1">
+                   <div class="contact__shape">
+                      <img class="contact-shape-1" src="assets/img/contact/contact-shape-1.png" alt="">
+                      <img class="contact-shape-2" src="assets/img/contact/contact-shape-2.png" alt="">
+                      <img class="contact-shape-3" src="assets/img/contact/contact-shape-3.png" alt="">
+                   </div>
+                   <div class="contact__info-inner white-bg">
+                      <img id="amaTranslation" src="assets/img/banner/tibpic.png">
+                    </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+    <!-- contact area end -->
+
+		<script type="text/javascript" src="assets/js/translation.js"></script>
+   
+ </main>
+<%- include('partials/footer') -%>

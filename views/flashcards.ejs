@@ -1,0 +1,38 @@
+<%- include('partials/headerFlashcards') -%>
+<body>
+
+      <!-- page title area start -->
+  <section class="page__title-area page__title-height page__title-overlay d-flex align-items-center" data-background="assets/img/banner/tibAnte.jpeg">
+    <div class="container">
+       <div class="row">
+          <div class="col-xxl-12">
+             <div class="page__title-wrapper mt-110">
+                <h3 class="page__title">Flash Cards</h3>                         
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+ <!-- page title area end -->
+
+ <main id="flashbody">
+    <h1></h1>
+    <div class="flashcard">
+        <div class="card">
+            <div class="card-front">
+                <img id="question">
+            </div>
+            <div class="card-back">
+                <img id="answer">
+            </div>
+        </div>
+        <div id="flashbtn">
+            <button id="flip-btn" class="e-btn">Flip</button>
+            <button id="next-btn" class="e-btn">Next</button>
+        </div>
+    </div>
+    <script src="assets/js/flashcards.js"></script>
+</main>
+</body>
+
+<%- include('partials/footer') -%>

@@ -1,0 +1,96 @@
+
+#gameBody {
+  padding-top: 80px;
+  word-wrap: break-word;
+  margin: 0 auto;
+  margin-top: 100px;
+  
+}
+
+#img {
+  height: 200px;
+  border-radius: 15px;
+}
+
+.footer__link {
+  text-align: right;
+}
+
+#gameReset {
+  margin: 0;
+}
+
+.gameReset {
+  height: 30px;
+  /* margin-left: 500px; */
+}
+
+.memory-game {
+  margin: 0;
+}
+
+#gameBody {
+  height: 100vh;
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.memory-game {
+  width: 640px;
+  height: 640px;
+  margin: 0 auto; /* Center horizontally */
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+
+.memory-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+  border-radius: 15px;
+
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+  
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 15px;
+  background: #d9d9dc6b;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+#centerButtons{
+  display: flex;
+  justify-content: center;
+}
+#addPoints{
+  margin-left: 10px;
+}
+.front-face{
+  background-color: #e6e6e6;  
+}

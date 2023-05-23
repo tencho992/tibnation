@@ -1,0 +1,43 @@
+<%- include('partials/headerAcc') -%>
+<section class="page__title-area page__title-height page__title-overlay d-flex align-items-center" data-background="assets/img/about/accSettings.webp">
+   <div class="container">
+      <div class="row">
+         <div class="col-xxl-12">
+            <div class="page__title-wrapper mt-110">
+               <h5 class="page__title">Account Settings</h5>
+               <br>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+<div> 
+   <section id="account" >
+
+<div id="userInfo" >
+   <div id="one">
+      <h2>User Name: <%= user.userName %><i onclick="showInputs()" class="fal fa-pencil editUser"></i></h2>
+      <form action="/updateUser/<%= user._id.toString()%>/?_method=PUT" method="post">
+       <input type="text" id="userInput" hidden placeholder="update username" name="newUserName">
+       <button type="submit" class="e-btn" hidden id="updateBtn1">Update</button>
+      </form>
+   </div>
+   <div id="two">
+      <h2><strong>Email</strong>: <%= user.email %><i  onclick="showInputs2()" class="fal fa-pencil editEmail"></i></h2>
+      <form action="/updateEmail/<%= user._id.toString()%>/?_method=PUT" method="post">
+       <input type="text" id='emailInput' hidden placeholder="update email" name="newEmail" >
+       <button type="submit" class="e-btn" hidden id="updateBtn2">Update</button>
+      </form>
+</div>
+
+</div>
+     <form action="/post/deleteUser/<%= user._id.toString() %>/?_method=DELETE" method="POST">
+       <h4 id="cssDelete"> <button type="submit" class="e-btn">Delete Account: We're Sorry to see you go!</button></h4>
+     </form>
+
+</section>
+
+</div>
+
+<%- include('partials/footer') -%>

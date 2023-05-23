@@ -1,0 +1,78 @@
+<%- include('partials/headerGame') -%>
+<section class="page__title-area pt-120 pb-90" style="background-image: url('assets/img/course/bg.png');">
+
+<div class="container">
+
+<div id="gameBody">  
+   
+        
+        
+    <section class="memory-game">
+        <div class="memory-card" data-framework="aurelia">
+          <img id="img" class="front-face" src="assets/img/course/game/ka.png" alt="Thor">
+          <img id="img" class="back-face" src="assets/img/course/game/Ama.png" alt="Avengers Mobile Background">
+        </div>
+        <div class="memory-card" data-framework="aurelia">
+          <img id="img" class="front-face" src="assets/img/course/game/Tka.png" alt="Thor">
+          <img id="img" class="back-face" src="assets/img/course/game/Agu.png" alt="Avengers Mobile Background">
+
+        </div>
+    
+        <div class="memory-card" data-framework="vue">
+          <img id="img" class="front-face" src="assets/img/course/game/Tta.png" alt="Captn America">
+          <img id="img" class="back-face" src="assets/img/course/game/Ama.png" alt="Avengers Mobile Background">
+        </div>
+        <div class="memory-card" data-framework="vue">
+          <img id="img" class="front-face" src="assets/img/course/game/taEng.png" alt="Captn America">
+          <img id="img" class="back-face" src="assets/img/course/game/Apa.png" alt="Avengers Mobile Background">
+        </div>
+    
+        <div class="memory-card" data-framework="angular">
+          <img id="img" class="front-face" src="assets/img/course/game/tra.png" alt="Black Panther">
+          <img id="img" class="back-face" src="assets/img/course/game/Apa.png" alt="Avengers Mobile Background">
+        </div>
+        <div class="memory-card" data-framework="angular">
+          <img id="img" class="front-face" src="assets/img/course/game/ra.png" alt="Black Panther">
+          <img id="img" class="back-face" src="assets/img/course/game/Agu.png" alt="Avengers Mobile Background">
+        </div>
+    
+        <div class="memory-card" data-framework="ember">
+          <img id="img" class="front-face" src="assets/img/course/game/Tha.png" alt="Iron Man">
+          <img id="img" class="back-face" src="assets/img/course/game/Ama.png" alt="Avengers Mobile Background">
+        </div>
+        <div class="memory-card" data-framework="ember">
+          <img id="img" class="front-face" src="assets/img/course/game/ha.png" alt="Iron Man">
+          <img id="img" class="back-face" src="assets/img/course/game/Agu.png" alt="Avengers Mobile Background">
+        </div>
+    
+        <div class="memory-card" data-framework="backbone">
+          <img id="img" class="front-face" src="assets/img/course/game/Taa.png" alt="Dr. Strange">
+          <img id="img" class="back-face" src="assets/img/course/game/Apa.png" alt="Avengers Mobile Background">
+        </div>
+        <div class="memory-card" data-framework="backbone">
+          <img id="img" class="front-face" src="assets/img/course/game/taaeng.png" alt="Dr. Strange">
+          <img id="img" class="back-face" src="assets/img/course/game/Ama.png" alt="Avengers Mobile Background">
+        </div>
+
+
+        <div class="memory-card" data-framework="react">
+          <img id="img" class="front-face" src="assets/img/course/game/Tcha.png" alt="The Hulk">
+          <img id="img" class="back-face" src="assets/img/course/game/Ama.png" alt="Avengers Mobile Background">
+        </div>
+        <div class="memory-card" data-framework="react">
+          <img id="img" class="front-face" src="assets/img/course/game/cha.png" alt="The Hulk">
+          <img id="img" class="back-face" src="assets/img/course/game/Agu.png" alt="Avengers Mobile Background">
+        </div>
+      </section>
+ 
+      </div>
+      <div id="centerButtons">
+        <a href="/practiceOne" class="e-btn" id="resetGame">Reset Game</a>
+      
+        <button onclick="addPoints()" disabled name="submit" class="e-btn" id="addPoints">Submit</button>
+      </div>
+ </div>
+ </section>
+ <script src="assets/js/game.js"></script>
+
+<%- include('partials/footer') -%>
