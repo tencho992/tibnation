@@ -8647,7 +8647,6 @@ p.checkout-coupon input[type=text]:focus {
 }
 #userInput{
   margin-top: 2px;
-  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
