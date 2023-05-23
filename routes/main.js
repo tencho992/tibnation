@@ -4,6 +4,7 @@ const authController = require("../controllers/auth");
 const homeController = require("../controllers/home");
 const postsController = require("../controllers/posts");
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
+const passport = require("passport");
 
 //Main Routes - landing page // boilerplate
 router.get("/", homeController.getIndex);
@@ -17,6 +18,8 @@ router.post("/signup", authController.postSignup);
 router.get("/settings", ensureAuth, postsController.getSettings);
 router.put("/updateUser/:id", ensureAuth, authController.updateUser);
 router.put("/updateEmail/:id", ensureAuth, authController.updateEmail);
+router.get("/auth/google", passport.authenticate(["google", "local"], { scope: ["email", "profile"] }));
+router.get("/auth/google/callback", passport.authenticate(["google", "local"], { session: false }), authController.googleCallback );
 
 
 //main routes --body////////////
@@ -33,6 +36,7 @@ router.get("/completeQuiz", homeController.getCompleteQuiz); //Prior wishlist.ej
 router.get("/translation", homeController.getTranslation);
 router.get("/flashcards", homeController.getFlashcards);
 router.get("/draw", homeController.getDraw);
+router.get("/level2", homeController.getLevelTwo);
 
 module.exports = router;
 

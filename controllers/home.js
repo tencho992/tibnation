@@ -58,5 +58,10 @@ module.exports = {
   getDraw: (req, res) => {
     res.render("drawConsonant.ejs");
     
+  },
+  getLevelTwo: (req, res) => {
+    res.render("level2.ejs");
+    
   }
+
 };

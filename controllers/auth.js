@@ -26,7 +26,7 @@ exports.postLogin = (req, res, next) => {
     gmail_remove_dots: false,
   });
 
-  passport.authenticate("local", (err, user, info) => {
+  passport.authenticate(["google", "local"], (err, user, info) => {
     if (err) {
       return next(err);
     }
@@ -41,6 +41,8 @@ exports.postLogin = (req, res, next) => {
       req.flash("success", { msg: "Success! You are logged in." });
       res.redirect(req.session.returnTo || "/profile");
     });
+
+
   })(req, res, next);
 };
 
@@ -128,7 +130,7 @@ exports.deleteUser = async (req, res) => {
   }
 };
 exports.updateUser = async (req, res) => {
-  try{
+  try {
     let newUserName = req.body.newUserName
     console.log(newUserName)
     await User.findOneAndUpdate(
@@ -138,12 +140,12 @@ exports.updateUser = async (req, res) => {
       }
     );
     res.redirect('/settings')
-  }catch (err) {
+  } catch (err) {
     res.redirect("/settings");
   }
 };
 exports.updateEmail = async (req, res) => {
-  try{
+  try {
     let newEmail = req.body.newEmail
     console.log(newEmail)
     await User.findOneAndUpdate(
@@ -153,7 +155,12 @@ exports.updateEmail = async (req, res) => {
       }
     );
     res.redirect('/settings')
-  }catch (err) {
+  } catch (err) {
     res.redirect("/settings");
   }
 };
+exports.googleCallback = (req, res) => {
+  res.redirect("/profile/");
+}
+
+
