@@ -15,21 +15,21 @@ const scoreDiv = document.getElementById("scoreContainer");
 let questions = [
     {
         question : "How do you pronounce this consonant?",
-        imgSrc : "assets/img/course/quiz/Tka.png",
+        imgSrc : "public/assets/imgcourse/quiz/Tka.png",
         choiceA : "AA",
         choiceB : "HA",
         choiceC : "KA",
         correct : "C"
     },{
         question : "How do you pronounce this consonant?",
-        imgSrc : "assets/img/course/quiz/Tha.png",
+        imgSrc : "public/assets/imgcourse/quiz/Tha.png",
         choiceA : "KA",
         choiceB : "HA",
         choiceC : "AA",
         correct : "B"
     },{
         question : "How do you pronounce this consonant?",
-        imgSrc : "assets/img/course/quiz/Tma.png",
+        imgSrc : "public/assets/imgcourse/quiz/Tma.png",
         choiceA : "RA",
         choiceB : "NA",
         choiceC : "MA",
@@ -37,7 +37,7 @@ let questions = [
     },
     {
         question : "How do you pronounce this consonant?",
-        imgSrc : "assets/img/course/quiz/Tra.png",
+        imgSrc : "public/assets/imgcourse/quiz/Tra.png",
         choiceA : "RA",
         choiceB : "NA",
         choiceC : "MA",
@@ -155,7 +155,7 @@ function scoreRender(){
     let winner = (scorePerCent >=70 ? passButton.disabled = false : passButton.disabled = true)
 
     // choose the image based on the scorePerCent
-    let img = (scorePerCent >= 70) ? "assets/img/course/quiz/pass.png" : "assets/img/course/quiz/fail.png";
+    let img = (scorePerCent >= 70) ? "public/assets/imgcourse/quiz/pass.png" : "public/assets/imgcourse/quiz/fail.png";
     scoreDiv.innerHTML = "<img src="+ img +">";
     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
 }
