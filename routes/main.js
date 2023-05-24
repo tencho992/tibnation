@@ -37,6 +37,7 @@ router.get("/translation", homeController.getTranslation);
 router.get("/flashcards", homeController.getFlashcards);
 router.get("/draw", homeController.getDraw);
 router.get("/level2", homeController.getLevelTwo);
+router.get("/dev", homeController.getDev); 
 
 module.exports = router;
 

@@ -62,6 +62,10 @@ module.exports = {
   getLevelTwo: (req, res) => {
     res.render("level2.ejs");
     
+  },
+  getDev: (req, res) => {
+    res.render("developers.ejs");
+    
   }
 
 };

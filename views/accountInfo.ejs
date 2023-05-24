@@ -17,23 +17,23 @@
 
 <div id="userInfo" >
    <div id="one">
-      <h2>User Name: <%= user.userName %><i onclick="showInputs()" class="fal fa-pencil editUser"></i></h2>
+      <h3>User Name: <%= user.userName %><i onclick="showInputs()" class="fal fa-pencil editUser"></i></h3>
       <form action="/updateUser/<%= user._id.toString()%>/?_method=PUT" method="post">
        <input type="text" id="userNameInput" hidden placeholder="update username" name="newUserName">
-       <button type="submit" class="e-btn" hidden id="updateBtn1">Update</button>
+       <button type="submit" class="e-btnz" hidden id="updateBtn1">Update</button>
       </form>
    </div>
    <div id="two">
-      <h2><strong>Email</strong>: <%= user.email %><i  onclick="showInputs2()" class="fal fa-pencil editEmail"></i></h2>
+      <h3><strong>Email</strong>: <%= user.email %><i  onclick="showInputs2()" class="fal fa-pencil editEmail"></i></h3>
       <form action="/updateEmail/<%= user._id.toString()%>/?_method=PUT" method="post">
        <input type="text" id='emailInput' hidden placeholder="update email" name="newEmail" >
-       <button type="submit" class="e-btn" hidden id="updateBtn2">Update</button>
+       <button type="submit" class="e-btnz" hidden id="updateBtn2">Update</button>
       </form>
 </div>
 
 </div>
      <form action="/post/deleteUser/<%= user._id.toString() %>/?_method=DELETE" method="POST">
-       <h4 id="cssDelete"> <button type="submit" class="e-btn">Delete Account: We're Sorry to see you go!</button></h4>
+       <h3 id="cssDelete"> <button type="submit" class="e-btnz">Delete Account</button></h3>
      </form>
 
 </section>

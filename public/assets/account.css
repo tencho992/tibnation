@@ -1,6 +1,77 @@
-#one{
-  display: flex;
+/* Style section with ID "account" */
+
+#account {
+  padding: 20px;
 }
-#two{
+
+/* Style user info container */
+#userInfo {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+/* Style user name section */
+#one h3 {
   display: flex;
+  align-items: center;
+}
+
+#one h3 i {
+  margin-left: 15px;
+  cursor: pointer;
+  color: #cac8c8;
+}
+
+/* Style email section */
+#two h3 {
+  display: flex;
+  align-items: center;
+}
+
+#two h3 i {
+  margin-left: 15px;
+  cursor: pointer;
+  color: #cac8c8;
+}
+
+/* Style input fields */
+input[type="text"] {
+  width: 20%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Style update button */
+.e-btnz {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.e-btnz:hover {
+  background-color: #45a049;
+}
+
+/* Style delete account button */
+#cssDelete button {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 50px;
+  margin-left: 50px;
+
+}
+
+#cssDelete button:hover {
+  background-color: #d32f2f;
 }
