@@ -1,8 +1,12 @@
 module.exports = {
   ensureAuth: function (req, res, next) {
-    if (req.user.userName) {
+    console.log(req)
+    if (req.isAuthenticated()) {
       return next();
-    } else {
+    }
+    // jwt.verify(req.cookies.jwtToken, "secretKey", (error, decoded))
+
+    else {
       res.redirect("/");
     }
   },

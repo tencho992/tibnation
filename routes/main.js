@@ -7,7 +7,7 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 const passport = require("passport");
 
 //Main Routes - landing page // boilerplate
-router.get("/", homeController.getIndex);
+router.get("/", homeController.getIndex); 
 router.get("/profile", ensureAuth, postsController.getProfile);
 router.get("/feed", ensureAuth, postsController.getFeed);
 router.get("/login", authController.getLogin);
@@ -19,7 +19,7 @@ router.get("/settings", ensureAuth, postsController.getSettings);
 router.put("/updateUser/:id", ensureAuth, authController.updateUser);
 router.put("/updateEmail/:id", ensureAuth, authController.updateEmail);
 router.get("/auth/google", passport.authenticate(["google", "local"], { scope: ["email", "profile"] }));
-router.get("/auth/google/callback", passport.authenticate(["google", "local"], { session: false }), authController.googleCallback );
+router.get("/auth/google/callback", passport.authenticate(["google", "local"]), authController.googleCallback );
 
 
 //main routes --body////////////

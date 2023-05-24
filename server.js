@@ -10,6 +10,8 @@ const logger = require("morgan");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
+const jwt = require("jsonwebtoken");
+const cookieParser = require('cookie-parser')
 
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
@@ -29,6 +31,9 @@ app.use(express.static("public"));
 //Body Parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+//cookie parser
+app.use(cookieParser());
 
 //Logging
 app.use(logger("dev"));

@@ -1,6 +1,7 @@
 const passport = require("passport");
 const validator = require("validator");
 const User = require("../models/User");
+const jwt = require('jsonwebtoken')
 
 exports.getLogin = (req, res) => {
   if (req.user) {
@@ -160,7 +161,23 @@ exports.updateEmail = async (req, res) => {
   }
 };
 exports.googleCallback = (req, res) => {
-  res.redirect("/profile/");
-}
+    jwt.sign(
+      { user: req.user },
+      "secretKey",
+      { expiresIn: "1h" },
+      (err, token) => {
+        if (err) {
+          return res.json({
+            token: null,
+          });
+        } 
+        res.cookie('jwtToken', token, {
+          httpOnly: true, // Prevent JavaScript access to the cookie
+          maxAge: 3600000, // Cookie expiration time (in milliseconds)
+          // other cookie options if needed
+        });
+        res.redirect("/profile");
+      });
+  }
 
 

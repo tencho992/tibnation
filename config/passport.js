@@ -2,6 +2,8 @@ const LocalStrategy = require("passport-local").Strategy;
 const mongoose = require("mongoose");
 const User = require("../models/User");
 const GoogleStrategy = require("passport-google-oauth2").Strategy;
+const JwtStrategy = require("passport-jwt").Strategy;
+const { ExtractJwt } = require("passport-jwt");
 
 module.exports = function (passport) {
   passport.use(
@@ -31,36 +33,53 @@ module.exports = function (passport) {
       });
     })
   );
-    passport.use(new GoogleStrategy({
-      clientID: process.env.CLIENT_ID,
-      clientSecret: process.env.CLIENT_SECRET,
-      callbackURL: "http://localhost:2121/auth/google/callback",
-      passReqToCallback: true
-    },
-      async (request, accessToken, refreshToken, profile, done) => {
+  passport.use(new GoogleStrategy({
+    clientID: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
+    callbackURL: "http://localhost:2121/auth/google/callback",
+    passReqToCallback: true
+  },
+    async (req, accessToken, refreshToken, profile, done) => {
+      try {
+        let existingUser = await User.findOne({ 'google.id': profile.id });
+        if (existingUser) {
+          return done(null, existingUser);
+        }
+        console.log('Creating new user...');
+        const user = new User({
+          userName: profile.displayName,
+          email: profile.emails[0].value,
+          points: 0,
+          google: {
+            id: profile.id,
+            name: profile.displayName,
+            email: profile.emails[0].value
+          },
+          method: 'google'
+        });
+        await user.save();
+        return done(null, user);
+      } catch (error) {
+        return done(error, false)
+      }
+    }
+  ));
+  passport.use(
+    new JwtStrategy(
+      {
+        jwtFromRequest: ExtractJwt.fromHeader("authorization"),
+        secretOrKey: "secretKey",
+      },
+      async (jwtPayload, done) => {
         try {
-          let existingUser = await User.findOne({ 'google.id': profile.id });
-          if (existingUser) {
-            return done(null, existingUser);
-          }
-          console.log('Creating new user...');
-          const newUser = new User({
-            userName: profile.displayName,
-            email: profile.emails[0].value,
-            google: {
-              id: profile.id,
-              name: profile.displayName,
-              email: profile.emails[0].value
-            },
-            method: 'google'
-          });
-          await newUser.save();
-          return done(null, newUser);
+          const user = jwtPayload.user;
+          done(null, user);
         } catch (error) {
-          return done(error, false)
+          done(error, false);
         }
       }
-    ));
+    )
+  );
   passport.serializeUser((user, done) => {
     done(null, user.id);
   });
