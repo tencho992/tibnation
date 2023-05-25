@@ -123,6 +123,7 @@ exports.postSignup = (req, res, next) => {
 exports.deleteUser = async (req, res) => {
   try {
     //delete user
+    //target by id
     await User.remove({ _id: req.params.id });
     console.log("Deleted Post");
     res.redirect("/");
@@ -132,12 +133,13 @@ exports.deleteUser = async (req, res) => {
 };
 exports.updateUser = async (req, res) => {
   try {
+    //create var that hold new data
     let newUserName = req.body.newUserName
     console.log(newUserName)
     await User.findOneAndUpdate(
       { _id: req.params.id },
       {
-        $set: { userName: newUserName },
+        $set: { userName: newUserName }, 
       }
     );
     res.redirect('/settings')
@@ -174,7 +176,7 @@ exports.googleCallback = (req, res) => {
         res.cookie('jwtToken', token, {
           httpOnly: true, // Prevent JavaScript access to the cookie
           maxAge: 3600000, // Cookie expiration time (in milliseconds)
-          // other cookie options if needed
+          // add other cookie options if needed
         });
         res.redirect("/profile");
       });

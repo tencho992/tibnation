@@ -20,6 +20,6 @@ router.get("/points/add", postsController.addPoints);
 
 router.get("/points/addQuiz", postsController.addQuizPoints);
 
-router.delete("/deleteUser/:id?", deleteUser);
+router.delete("/deleteUser/:id?", deleteUser); //? used to append query
 
 module.exports = router;

@@ -18,6 +18,7 @@ router.post("/signup", authController.postSignup);
 router.get("/settings", ensureAuth, postsController.getSettings);
 router.put("/updateUser/:id", ensureAuth, authController.updateUser);
 router.put("/updateEmail/:id", ensureAuth, authController.updateEmail);
+//Wasn't sure if "local" was neccesary but kept bc it works.
 router.get("/auth/google", passport.authenticate(["google", "local"], { scope: ["email", "profile"] }));
 router.get("/auth/google/callback", passport.authenticate(["google", "local"]), authController.googleCallback );
 

@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Grab all elements on UI
     const canvasContainer = document.querySelector('.canvas-container');
     const tracingCanvas = document.querySelector('.tracing-canvas');
     const context = tracingCanvas.getContext('2d');
     const clearButton = document.querySelector('#clear-button');
     const nextButton = document.querySelector('#next-button');
+    //create boolean for tracing for later
     let isTracing = false;
   
     // Adjust the canvas size to match the container dimensions
