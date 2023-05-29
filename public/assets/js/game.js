@@ -62,7 +62,7 @@ function reset(){
   location.reload()
 }
 
-//variable cards check all individually to check if theyre flipped 
+//cards check if theyre flipped 
 //classlist = flipped
 function gameOver(){
   console.log(cards)

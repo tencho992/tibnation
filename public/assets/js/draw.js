@@ -92,7 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
         currentImageIndex = 0;
       }
       const imagePath = imagePaths[currentImageIndex];
-      // Update the character image source
       const characterImage = document.querySelector('.character-image');
       characterImage.src = imagePath;
       // Clear the canvas
