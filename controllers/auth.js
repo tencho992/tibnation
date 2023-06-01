@@ -163,9 +163,9 @@ exports.updateEmail = async (req, res) => {
   }
 };
 exports.googleCallback = (req, res) => {
-    jwt.sign(
+    jwt.sign( 
       { user: req.user },
-      "secretKey",
+      "secretKey", //callback token
       { expiresIn: "1h" },
       (err, token) => {
         if (err) {
