@@ -7,7 +7,7 @@ const card = document.querySelector(".card");
 
 const flashcards = [
     {
-        question: "assets/img/course/game/tka.png",
+        question: "assets/img/course/game/Tka.png",
         answer: "assets/img/course/game/ka.png"
     },
     {
@@ -15,115 +15,115 @@ const flashcards = [
         answer: "assets/img/course/game/kha.png"
     },
     {
-        question: "assets/img/course/game/tga.png",
+        question: "assets/img/course/game/Tga.png",
         answer: "assets/img/course/game/ga.png"
     },
     {
-        question: "assets/img/course/game/tnga.png",
+        question: "assets/img/course/game/Tnga.png",
         answer: "assets/img/course/game/nga.png"
     },
     {
-        question: "assets/img/course/game/tcha.png",
+        question: "assets/img/course/game/Tcha.png",
         answer: "assets/img/course/game/cha.png"
     },
     {
-        question: "assets/img/course/game/tchha.png",
+        question: "assets/img/course/game/Tchha.png",
         answer: "assets/img/course/game/chha.png"
     },
     {
-        question: "assets/img/course/game/tja.png",
+        question: "assets/img/course/game/Tja.png",
         answer: "assets/img/course/game/ja.png"
     },
     {
-        question: "assets/img/course/game/tnya.png",
+        question: "assets/img/course/game/Tnya.png",
         answer: "assets/img/course/game/nya.png"
     },
     {
-        question: "assets/img/course/game/tta.png",
+        question: "assets/img/course/game/Tta.png",
         answer: "assets/img/course/game/taeng.png"
     },
     {
-        question: "assets/img/course/game/ttta.png",
+        question: "assets/img/course/game/Ttta.png",
         answer: "assets/img/course/game/ttaeng.png"
     },
     {
-        question: "assets/img/course/game/tda.png",
+        question: "assets/img/course/game/Tda.png",
         answer: "assets/img/course/game/da.png"
     },
     {
-        question: "assets/img/course/game/tna.png",
+        question: "assets/img/course/game/Tna.png",
         answer: "assets/img/course/game/na.png"
     },
     {
-        question: "assets/img/course/game/tpa.png",
+        question: "assets/img/course/game/Tpa.png",
         answer: "assets/img/course/game/pa.png"
     },
     {
-        question: "assets/img/course/game/tppa.png",
+        question: "assets/img/course/game/Tppa.png",
         answer: "assets/img/course/game/ppa.png"
     },
     {
-        question: "assets/img/course/game/tba.png",
+        question: "assets/img/course/game/Tba.png",
         answer: "assets/img/course/game/ba.png"
     },
     {
-        question: "assets/img/course/game/tma.png",
+        question: "assets/img/course/game/Tma.png",
         answer: "assets/img/course/game/ma.png"
     },
     {
-        question: "assets/img/course/game/ttsa.png",
+        question: "assets/img/course/game/Ttsa.png",
         answer: "assets/img/course/game/tsaeng.png"
     },
     {
-        question: "assets/img/course/game/ttssa.png",
+        question: "assets/img/course/game/Ttssa.png",
         answer: "assets/img/course/game/tssa.png"
     },
     {
-        question: "assets/img/course/game/tdza.png",
+        question: "assets/img/course/game/Tdza.png",
         answer: "assets/img/course/game/dza.png"
     },
     {
-        question: "assets/img/course/game/twa.png",
+        question: "assets/img/course/game/Twa.png",
         answer: "assets/img/course/game/wa.png"
     },
     {
-        question: "assets/img/course/game/tzha.png",
+        question: "assets/img/course/game/Tzha.png",
         answer: "assets/img/course/game/zha.png"
     },
     {
-        question: "assets/img/course/game/tza.png",
+        question: "assets/img/course/game/Tza.png",
         answer: "assets/img/course/game/za.png"
     },
     {
-        question: "assets/img/course/game/taa.png",
+        question: "assets/img/course/game/Taa.png",
         answer: "assets/img/course/game/aa.png"
     },
     {
-        question: "assets/img/course/game/tya.png",
+        question: "assets/img/course/game/Tya.png",
         answer: "assets/img/course/game/ya.png"
     },
     {
-        question: "assets/img/course/game/tra.png",
+        question: "assets/img/course/game/Tra.png",
         answer: "assets/img/course/game/ra.png"
     },
     {
-        question: "assets/img/course/game/tla.png",
+        question: "assets/img/course/game/Tla.png",
         answer: "assets/img/course/game/la.png"
     },
     {
-        question: "assets/img/course/game/tsha.png",
+        question: "assets/img/course/game/Tsha.png",
         answer: "assets/img/course/game/sha.png"
     },
     {
-        question: "assets/img/course/game/tsa.png",
+        question: "assets/img/course/game/Tsa.png",
         answer: "assets/img/course/game/tsaeng.png"
     },
     {
-        question: "assets/img/course/game/tha.png",
+        question: "assets/img/course/game/Tha.png",
         answer: "assets/img/course/game/ha.png"
     },
     {
-        question: "assets/img/course/game/ta.png",
+        question: "assets/img/course/game/Ta.png",
         answer: "assets/img/course/game/a.png"
     }
 
