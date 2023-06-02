@@ -34,7 +34,7 @@ module.exports = {
     try {
       const post = await Post.findById(req.params.id);
       const comments = await Comments.find({postid: ObjectId(req.params.id) })
-      console.log(comments)
+      //console.log(comments)
       res.render("post.ejs", { post: post, user: req.user, comments: comments });
     } catch (err) {
       console.log(err);
@@ -89,7 +89,7 @@ module.exports = {
 createComments: async (req, res) => {
   try {
 
-    console.log(req.body)
+    //console.log(req.body)
     await Comments.create({
       name: req.body.name,
       comment: req.body.comment,

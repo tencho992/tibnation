@@ -135,7 +135,7 @@ exports.updateUser = async (req, res) => {
   try {
     //create var that hold new data
     let newUserName = req.body.newUserName
-    console.log(newUserName)
+    // console.log(newUserName)
     await User.findOneAndUpdate(
       { _id: req.params.id },
       {
@@ -150,7 +150,7 @@ exports.updateUser = async (req, res) => {
 exports.updateEmail = async (req, res) => {
   try {
     let newEmail = req.body.newEmail
-    console.log(newEmail)
+    //console.log(newEmail)
     await User.findOneAndUpdate(
       { _id: req.params.id },
       {
