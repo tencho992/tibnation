@@ -44,7 +44,7 @@ const flashcards = [
     },
     {
         question: "assets/img/course/game/Ttta.png",
-        answer: "assets/img/course/game/ttaeng.png"
+        answer: "assets/img/course/game/taaeng.png"
     },
     {
         question: "assets/img/course/game/Tda.png",
